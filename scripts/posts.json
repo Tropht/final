@@ -1,0 +1,7 @@
+{
+  "posts":{
+    "id": 1,
+    "title": "JSON FILE",
+    "body": "Welcome to your posts!(JSON)"
+  }
+}

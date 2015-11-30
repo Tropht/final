@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "JSON FILE",
+      "body": "Welcome to your posts!(JSON)"
+    },
+    {
+      "id": 2,
+      "title": "Test",
+      "body": "This is a test."
+    },
+    {
+      "title": "hello",
+      "body": "Please work",
+      "id": 3
+    },
+    {
+      "title": "New Post",
+      "body": "Here is a new post that I would like to add.",
+      "id": 4
+    }
+  ]
+}
