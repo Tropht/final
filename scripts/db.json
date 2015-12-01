@@ -2,8 +2,8 @@
   "posts": [
     {
       "id": 1,
-      "title": "JSON FILE",
-      "body": "Welcome to your posts!(JSON)"
+      "title": "Hello!",
+      "body": "Welcome to your posts!"
     },
     {
       "id": 2,
@@ -11,14 +11,24 @@
       "body": "This is a test."
     },
     {
-      "title": "hello",
-      "body": "Please work",
+      "title": "Test 2",
+      "body": "Just making sure this still works.",
       "id": 3
     },
     {
-      "title": "New Post",
-      "body": "Here is a new post that I would like to add.",
+      "title": "Test 3",
+      "body": "I'm not sure what happens if you start a new paragraph.\n\nLet's find out!",
       "id": 4
+    },
+    {
+      "title": "Here's a new post",
+      "body": "Just checking to make sure it works.",
+      "id": 5
+    },
+    {
+      "title": "asdfdafds",
+      "body": "asdfads",
+      "id": 6
     }
   ]
 }

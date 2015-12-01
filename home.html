@@ -1,1 +1,16 @@
-<h1>Home</h1>
+<h1>Welcome!</h1>
+
+<div ng-controller="myCtrl" class="container">
+  <h2>You have {{ postLength }} posts.</h2>
+  <br>
+  <h3>Your latest post is:</h3>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title" ng-bind="lastPost.title"></h3>
+    </div>
+  		<div class="panel-body">
+  			{{ lastPost.body }}
+  		</div>
+  </div>
+
+</div>

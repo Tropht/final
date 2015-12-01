@@ -4,6 +4,7 @@
 
   <div class="panel panel-info" ng-repeat="post in dbPosts">
     <div class="panel-heading">
+      <span style="float:right" class="delete glyphicon glyphicon-trash" ng-click="delete(post.id)"></span>
       <h3 class="panel-title" ng-bind="post.title"></h3>
     </div>
   		<div class="panel-body">
@@ -24,5 +25,6 @@
   		<button class="btn btn-success" ng-click="create()">Post</button>
   	</div>
   </div>
+
 
 </div>

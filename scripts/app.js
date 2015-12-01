@@ -37,13 +37,21 @@ blogApp.service('dbPosts', ['$http', function ($http) {
 	this.createPost = function(data){
 		return $http.post('http://localhost:3000/posts/', data);
 	}
-}])
+
+
+}]);
 
 blogApp.controller('myCtrl', ['$scope', 'dbPosts', function($scope, dbPosts){
+
 // Get Posts
 	dbPosts.getPost().success(function(data){
 	$scope.dbPosts = data;
+
+	 $scope.postLength = $scope.dbPosts.length;
+	 $scope.lastPost = $scope.dbPosts[$scope.dbPosts.length - 1];
+
 	});
+
 
 
 	$scope.newPost = {}; //New Post Object
@@ -52,7 +60,15 @@ blogApp.controller('myCtrl', ['$scope', 'dbPosts', function($scope, dbPosts){
 			dbPosts.createPost($scope.newPost);
 
 			$scope.newPost = {};
+			window.location.reload();
 		}
+// Delete Posts
+	$scope.delete = function(id){
+			dbPosts.deletePost(id).success(function(resp){
+				console.log(resp)
+			});
+			window.location.reload();
+		};
 
 
 }])
