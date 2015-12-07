@@ -1,0 +1,40 @@
+body {
+  background-color: #b8bbbd; }
+
+a {
+  color: white; }
+
+.navbar-default .navbar-nav li a {
+  color: white; }
+
+.navbar-default .navbar-brand {
+  color: white; }
+
+.navbar {
+  background-color: #38444E;
+  border: 1px solid black; }
+
+#info .panel-body #clock {
+  margin-left: 10px; }
+
+.panel .right {
+  width: 48%;
+  float: left; }
+.panel .left {
+  width: 48%;
+  float: left; }
+.panel .full {
+  width: 100%;
+  float: left;
+  border-top: 1px solid #38444E; }
+
+.panel {
+  border-radius: 0px;
+  border: 1px solid #38444E; }
+  .panel .panel-heading {
+    border-radius: 0px;
+    background-color: #38444E; }
+    .panel .panel-heading h3 {
+      color: white; }
+
+/*# sourceMappingURL=styles.css.map */

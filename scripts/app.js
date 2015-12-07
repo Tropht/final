@@ -38,10 +38,18 @@ blogApp.service('dbPosts', ['$http', function ($http) {
 		return $http.post('http://localhost:3000/posts/', data);
 	}
 
+}]);
+
+
+blogApp.service('dbWeather', ['$http', function ($http) {
+
+	this.getWeather = function(){
+		return $http.get('http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=84101,us&appid=2de143494c0b295cca9337e1e96b00e0');
+	}
 
 }]);
 
-blogApp.controller('myCtrl', ['$scope', 'dbPosts', function($scope, dbPosts){
+blogApp.controller('myCtrl', ['$scope', 'dbPosts', 'dbWeather', function($scope, dbPosts, dbWeather){
 
 // Get Posts
 	dbPosts.getPost().success(function(data){
@@ -52,6 +60,14 @@ blogApp.controller('myCtrl', ['$scope', 'dbPosts', function($scope, dbPosts){
 
 	});
 
+// Get Weather
+	dbWeather.getWeather().success(function(data){
+	$scope.dbWeather = data;
+
+	$scope.tempurature = $scope.dbWeather.main.temp 
+		console.log($scope.dbWeather.weather[0].main );
+		console.log($scope.dbWeather.main.temp );
+	});
 
 
 	$scope.newPost = {}; //New Post Object
@@ -72,3 +88,24 @@ blogApp.controller('myCtrl', ['$scope', 'dbPosts', function($scope, dbPosts){
 
 
 }])
+
+// Clock
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+  	// $('#clock').html(h + ":" + m + ":" + s);
+
+		$('#clock').html(h + ":" + m);
+
+    var t = setTimeout(startTime, 500);
+
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}

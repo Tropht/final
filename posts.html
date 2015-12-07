@@ -4,27 +4,11 @@
 
   <div class="panel panel-info" ng-repeat="post in dbPosts">
     <div class="panel-heading">
-      <span style="float:right" class="delete glyphicon glyphicon-trash" ng-click="delete(post.id)"></span>
       <h3 class="panel-title" ng-bind="post.title"></h3>
     </div>
   		<div class="panel-body">
   			{{ post.body }}
   		</div>
   </div>
-
-  <div class="panel panel-info submit">
-    <div class="panel-heading">
-      <h3 class="panel-title">Add New Post</h3>
-    </div>
-  	<div class="panel-body">
-      <input type="text" ng-model="newPost.title" style="width: 90%;" placeholder="Post Title">
-      <br>
-      <br>
-  		<textarea name=""  cols ="30" rows="10" ng-model="newPost.body"></textarea>
-  		<br>
-  		<button class="btn btn-success" ng-click="create()">Post</button>
-  	</div>
-  </div>
-
 
 </div>
