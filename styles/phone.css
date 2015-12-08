@@ -26,8 +26,7 @@
     float: left; }
   .panel .full {
     width: 100%;
-    float: left;
-    border-top: 1px solid #38444E; }
+    float: left; }
 
   .panel {
     border-radius: 0px;
@@ -36,6 +35,9 @@
       border-radius: 0px;
       background-color: #38444E; }
       .panel .panel-heading h3 {
-        color: white; } }
+        color: white; }
+
+  textarea {
+    resize: none; } }
 
 /*# sourceMappingURL=phone.css.map */

@@ -4,11 +4,15 @@
 
 <div ng-controller="myCtrl" class="container">
 
+  <h3>Basic info:</h3>
   <div class="panel panel-primary .col-md-4" id="info">
     <div class="panel-heading">
       <h3 class="panel-title">Info</h3>
     </div>
     <div class="panel-body">
+      <div class="full">
+        <h2 style="text-align: center; margin: 0;">{{ cityName }}</h2>
+      </div>
       <div class="left">
         <h4>Time:</h4><h3 id="clock"></h3>
       </div>
@@ -16,7 +20,7 @@
         <h4>Weather:</h4><h3>{{ tempurature }}°F</h3>
       </div>
 
-      <div class="full">
+      <div class="full" style="border-top: 1px solid #38444E;">
         <h3>You have {{ postLength }} posts.</h3>
       </div>
     </div>
@@ -25,6 +29,7 @@
   <h3>Your latest post is:</h3>
   <div class="panel panel-primary">
     <div class="panel-heading">
+      <h4 style="position: relative; float: right; top: -10px; color: white"  ng-bind="lastPost.date"></h4>
       <h3 class="panel-title" ng-bind="lastPost.title"></h3>
     </div>
   		<div class="panel-body">

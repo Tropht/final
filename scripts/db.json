@@ -6,49 +6,46 @@
       "body": "Welcome to your posts!"
     },
     {
-      "id": 2,
+      "date": "11/8/2015",
       "title": "Test",
-      "body": "This is a test."
+      "body": "I want to see if the date works",
+      "id": 11
     },
     {
+      "date": "11/8/2015",
       "title": "Test 2",
-      "body": "Just making sure this still works.",
-      "id": 3
+      "body": "All the dates should be the same",
+      "id": 12
     },
     {
+      "date": "11/8/2015",
       "title": "Test 3",
-      "body": "I'm not sure what happens if you start a new paragraph.\n\nLet's find out!",
-      "id": 4
+      "body": "I don't think I actually posted the last post",
+      "id": 13
     },
     {
-      "title": "Here's a new post",
-      "body": "Just checking to make sure it works.",
-      "id": 5
+      "date": "12/8/2015",
+      "title": "Test 4",
+      "body": "I just realized that the date has been wrong the entire time.",
+      "id": 14
     },
     {
-      "title": "sadfjaskladsfdsa",
-      "body": "dsafasdfas",
-      "id": 6
+      "date": "12/8/2015",
+      "title": "Test 5",
+      "body": "I hope I get full points for this project.",
+      "id": 15
     },
     {
-      "title": "New Post",
-      "body": "Hello everybody!",
-      "id": 7
+      "date": "12/8/2015",
+      "title": "Test 6",
+      "body": "I like to make posts.\nPosting is fun!",
+      "id": 16
     },
     {
-      "title": "My Feet Are Cold!",
-      "body": "This is fact!",
-      "id": 8
-    },
-    {
-      "title": "adsf",
-      "body": "asdfads",
-      "id": 9
-    },
-    {
-      "title": "Work",
-      "body": "Today at work I haven't really done much.",
-      "id": 10
+      "date": "12/8/2015",
+      "title": "Test 7",
+      "body": "When you're on a tablet, the posts kind of look weird.",
+      "id": 17
     }
   ]
 }

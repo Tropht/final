@@ -64,18 +64,24 @@ blogApp.controller('myCtrl', ['$scope', 'dbPosts', 'dbWeather', function($scope,
 	dbWeather.getWeather().success(function(data){
 	$scope.dbWeather = data;
 
-	$scope.tempurature = $scope.dbWeather.main.temp 
+	$scope.tempurature = $scope.dbWeather.main.temp;
+	$scope.cityName = $scope.dbWeather.name;
 		console.log($scope.dbWeather.weather[0].main );
-		console.log($scope.dbWeather.main.temp );
 	});
 
 
-	$scope.newPost = {}; //New Post Object
+	$scope.newPost = {
+		"date": todayDate
+	}; //New Post Object
+
+
 // Create Posts
 	$scope.create = function(){
 			dbPosts.createPost($scope.newPost);
 
-			$scope.newPost = {};
+			$scope.newPost = {
+				"date": todayDate
+			};
 			window.location.reload();
 		}
 // Delete Posts
@@ -109,3 +115,12 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
+
+// Today's Date
+
+var today = new Date();
+var day = today.getDate();
+var month = today.getMonth();
+var year = today.getUTCFullYear();
+
+var todayDate = (month + 1) + '/' + day + '/' + year;
