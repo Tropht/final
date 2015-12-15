@@ -148,9 +148,8 @@ function startTime() {
   	// $('#clock').html(h + ":" + m + ":" + s);
 
 		if(h >= 12){
-			h - 12;
 			ma = "PM";
-			$('#clock').html(h + ":" + m + " " + ma);
+			$('#clock').html(h - 12 + ":" + m + " " + ma);
 		}
 		else{
 			ma = "AM";
