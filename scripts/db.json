@@ -46,6 +46,24 @@
       "title": "Test 7",
       "body": "When you're on a tablet, the posts kind of look weird.",
       "id": 17
+    },
+    {
+      "date": "12/10/2015",
+      "title": "Test 8",
+      "body": "A new day, a new date. Let's check if it works.",
+      "id": 18
+    },
+    {
+      "date": "12/13/2015",
+      "title": "Test9",
+      "body": "This is a blogging application.",
+      "id": 19
+    },
+    {
+      "date": "12/13/2015",
+      "title": "Hello",
+      "body": "Hello again.",
+      "id": 20
     }
   ]
 }

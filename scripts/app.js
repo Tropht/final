@@ -66,7 +66,47 @@ blogApp.controller('myCtrl', ['$scope', 'dbPosts', 'dbWeather', function($scope,
 
 	$scope.tempurature = $scope.dbWeather.main.temp;
 	$scope.cityName = $scope.dbWeather.name;
-		console.log($scope.dbWeather.weather[0].main );
+	$scope.weather = $scope.dbWeather.weather[0].main;
+	$scope.weatherLogo;
+
+		switch($scope.weather.toLowerCase()){
+			case "clear sky":
+				$scope.weatherLogo = "http://openweathermap.org/img/w/01d.png";
+				console.log("It's clear!")
+				break;
+			case "few clouds":
+				$scope.weatherLogo = "http://openweathermap.org/img/w/02d.png";
+				console.log("A few clouds!")
+				break;
+			case "scattered clouds":
+				$scope.weatherLogo = "http://openweathermap.org/img/w/03d.png";
+				console.log("some scattered clouds!")
+				break;
+			case "broken clouds":
+				$scope.weatherLogo = "http://openweathermap.org/img/w/04d.png";
+				console.log("some broken clouds!")
+				break;
+			case "shower rain":
+				$scope.weatherLogo = "http://openweathermap.org/img/w/09d.png";
+				console.log("Shower rain!")
+				break;
+			case "rain":
+				$scope.weatherLogo = "http://openweathermap.org/img/w/10d.png";
+				console.log("rain!")
+				break;
+			case "thunderstorm":
+				$scope.weatherLogo = "http://openweathermap.org/img/w/11d.png";
+				console.log("thunderstorm!")
+				break;
+			case "snow":
+				$scope.weatherLogo = "http://openweathermap.org/img/w/13d.png";
+				console.log("snow!")
+				break;
+			case "mist":
+				$scope.weatherLogo = "http://openweathermap.org/img/w/50d.png";
+				console.log("mist!")
+				break;
+		}
 	});
 
 
@@ -102,11 +142,21 @@ function startTime() {
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
+		var ma;
     m = checkTime(m);
     s = checkTime(s);
   	// $('#clock').html(h + ":" + m + ":" + s);
 
-		$('#clock').html(h + ":" + m);
+		if(h >= 12){
+			h - 12;
+			ma = "PM";
+			$('#clock').html(h + ":" + m + " " + ma);
+		}
+		else{
+			ma = "AM";
+			$('#clock').html(h + ":" + m + " " + ma);
+		}
+
 
     var t = setTimeout(startTime, 500);
 
@@ -124,3 +174,30 @@ var month = today.getMonth();
 var year = today.getUTCFullYear();
 
 var todayDate = (month + 1) + '/' + day + '/' + year;
+
+// Geo location
+var lat = null;
+var lon = null;
+
+function showPosition(position) {
+	lat = position.coords.latitude;
+	lon = position.coords.longitude;
+
+		console.log(lat + " " +  lon);
+}
+
+function doit(){
+	console.log(lat);
+}
+
+
+navigator.geolocation.getCurrentPosition(showPosition);
+
+
+// window.setInterval(function(){
+// 	if (lat == null) {
+// 		console.log("Is null");
+// 	}else{
+// 		console.log("Is not null");
+// 	}
+// }, 100);

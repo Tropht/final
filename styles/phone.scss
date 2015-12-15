@@ -20,6 +20,7 @@ a{
 .navbar{
   background-color: $heading-color;
   border: 1px solid black;
+  border-radius: 0px;
 }
 
 // Main Content
@@ -42,6 +43,16 @@ a{
   .full{
     width: 100%;
     float: left;
+  }
+}
+#homePage{
+  .panel{
+    width: 100%;
+    .right{
+      img{
+        display: inline-table;
+      }
+    }
   }
 }
 

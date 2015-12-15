@@ -13,7 +13,8 @@
 
   .navbar {
     background-color: #38444E;
-    border: 1px solid black; }
+    border: 1px solid black;
+    border-radius: 0px; }
 
   #info .panel-body #clock {
     margin-left: 10px; }
@@ -27,6 +28,11 @@
   .panel .full {
     width: 100%;
     float: left; }
+
+  #homePage .panel {
+    width: 100%; }
+    #homePage .panel .right img {
+      display: inline-table; }
 
   .panel {
     border-radius: 0px;
